@@ -36,10 +36,10 @@ const Productos = () => {
 
     // Filtrar productos por búsqueda y categoría
     const filteredProducts = productos.filter(product => 
-        product && product.name && 
-        product.name.toLowerCase().includes(search.toLowerCase()) &&
+        product && product.title &&
+        product.title.toLowerCase().includes(search.toLowerCase()) &&
         (selectedCategory ? product.category === selectedCategory : true)
-    );
+    );    
 
     const styles = {
         container: {
@@ -84,7 +84,7 @@ const Productos = () => {
             >
                 <option value="">Todas las categorías</option>
                 {categorias.map(category => (
-                    <option key={category} value={category}>{category}</option>
+                    <option key={category.slug} value={category.slug}>{category.name}</option>
                 ))}
             </select>
             <div style={styles.productGrid}>

@@ -21,7 +21,6 @@ const ProductCard = ({ product }) => {
         name: {
             margin: '10px 0 0',
             fontSize: '18px',
-            fontWeight: 'bold',
         },
     };
 
@@ -30,14 +29,11 @@ const ProductCard = ({ product }) => {
     };
 
     return (
-        <div
-            style={styles.card}
-            onClick={handleClick}
-        >
+        <div style={styles.card} onClick={handleClick}>
+            <h3 style={styles.name}>{product.title}</h3>
             {product.images && product.images.length > 0 && (
                 <img src={product.images[0]} alt={product.title} style={styles.image} />
             )}
-            <h3 style={styles.name}>{product.title}</h3> {/* Asegúrate de que product.title sea una cadena */}
         </div>
     );
 };

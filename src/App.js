@@ -17,7 +17,7 @@ function App() {
             backgroundColor: '#f9f9f9',
         },
         header: {
-            backgroundColor: 'gray',
+            backgroundColor: '#9d31cc',
             padding: '10px 20px',
             color: 'white',
             display: 'flex',
@@ -39,7 +39,7 @@ function App() {
         navLink: {
             display: 'block', // Hacer que el enlace ocupe todo el li
             textDecoration: 'none',
-            color: 'black',
+            color: '#9d31cc',
             fontWeight: 'bold',
             fontSize: '24px',
             padding: '15px 20px', // Padding para aumentar el área clicable
@@ -49,7 +49,7 @@ function App() {
             borderRadius: 15,
             margin: '0px 10px',
             transition: 'background-color 0.2s ease', // Transición para el cambio de color
-            backgroundColor: 'white',
+            backgroundColor: '#FFF'
         },
         hamburger: {
             display: 'none',
@@ -111,7 +111,7 @@ function App() {
                                         key={index}
                                         style={{
                                             ...styles.navItem,
-                                            backgroundColor: isHovered ? 'darkgray' : 'lightgray', // Cambia el color al pasar el ratón
+                                            backgroundColor: isHovered ? 'darkgray' : '#FFF', // Cambia el color al pasar el ratón
                                         }}
                                         onMouseEnter={() => setHoveredItem(index)} // Cambia el hovered
                                         onMouseLeave={() => setHoveredItem(null)} // Restablece el hovered
